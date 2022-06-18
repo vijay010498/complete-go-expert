@@ -135,3 +135,61 @@ z, err := //
 // const MaxSpeed = 30
 // const AppAuthor = "Bon"
 
+// 14.. Basic Functions
+// func name(param1 type, param2 type) type { //body }
+// func sum(lhs, rhs int) int { return lhs + rhs } // same type so only one int at end is enough
+// result := sum(1,2)
+
+
+// Multiple return values
+// func multiReturn() (int, int, int) {  return 1,2,3 }
+// a,b, _ := multiReturn()
+
+// FUnction Naming  - camelCase
+
+// 17 - Operators
+// <, -,  >
+// ++, --
+// < , <=, >, >=, ==, !=
+// authorized && authenticated
+// red || blue
+// !heavy
+
+//18- if..else
+if userName != "" {
+
+} else {
+
+}
+
+if hasTicket && ticketValid {
+
+}
+if funds >  cost && accountActive {
+
+}
+// statement initialization
+if i :=5; i < 10 {
+
+} else {
+
+}
+/*****************88888/
+if rank := getUserRank(); rank === "admin" {
+
+} else if rank === "manager" {
+
+} else {
+
+}
+
+// Early Return -  Function Return
+token, err := getSession("vijay")
+if err != nil {
+    return
+}
+
+cart, err := getCart(token)
+if err != nil {
+    return
+}
