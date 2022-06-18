@@ -1,0 +1,137 @@
+1. Type Safety by compiler
+2. First-class Concurrency Support -  Perfect for Backend
+3. pointers, memory and concurrency
+
+
+//6
+Packages and modules
+import "name"
+
+// batch import
+import (
+ . "name" // . = without package name
+ pk "namespace/packageName" //pk = packageName alias
+)
+
+// Modules
+// Collections of Packages
+// go.mod file
+// Contains - Dependencies , GO Version, Package info
+// EX
+
+module example.com/practice
+
+go 1.17
+
+require (
+    github.com/alexflint/go-arg v1.4.2
+    github.com/fatih/color v1.12.5
+
+)
+
+// 7
+// Data types
+// Primitive type and type alias
+// Go is Statically typed - Data types must be provided by the programmer
+// Type inference - determine what type of data it is working with
+
+ // Signed Integer types - includes negative
+ //int8
+ //int16
+ //int
+ //int32
+ //int64
+
+ //Unsigned Integer Types - Only Positive includes 0
+ //unit8
+ //byte
+ //unit16
+ //uint
+ //uint32
+ //uint64
+ //uintptr || <pointer size>  - Depends on 32 or 64 bit systems
+
+ //Other Data types
+ //float32
+ //float64
+ //complex64 - 32-bit real and imaginary
+ //complex128
+ //bool
+
+ //Type Aliases
+ //type UserId int
+ //type Direction byte
+ //type Speed float64
+ //type Velocity Speed //Note here  **** || it is actually float64
+
+
+ //Type Conversions
+ // Using Parenthesis we can convert type
+ // type UserId int
+ // type Speed float64
+ // UserId(5)
+ // Speed(88.3)
+
+ //8 -  Strings / Runes
+ // rune - like char - letters, numbers, emojis,
+ // // String  - "vijay" - Multiple runes
+
+ || Runes: 'a' 'R' '7' '\n' `$`
+ || Strings: "Amount is $22\n"
+               "k"
+ || Raw Literal: `Let's Code in "Golang!"\n`
+
+ //9 - Go CLi
+    // Update dependencies
+    // Build - builds and exectable binary
+    //build-race - checks for concurrency problems
+    //run - runs immeditely
+    //mod manages modules and dependencies
+        //mod tidy updated dependencies
+    //test: runs test suite
+    //fmt : formats source code
+/***********************************************************************/
+/***********************************************************************/
+//11 Go Pgm Fundamentals
+// variables
+// single creation
+// var example = 3
+// var example int = 3
+// var example int // default to 0
+    //example = 3
+
+// Compound creation
+//var a, b, c = 1, 2, "sample"
+
+// Block creation
+var (
+    a int = 1
+    b int = 2
+    c = "sample"
+)
+
+// Create and Assign - Short cut
+example := 3
+a, b := 1, "sample"
+
+// Defaults
+// String = ""
+// Number = 0
+// Other default: nil
+// var name string
+
+// "Comma, Ok"
+// a := 1
+    // var a = 5 ==> throws error
+//a, b := 1, 2
+//c, b := 3, 4 => Ok - No Error
+//x, err := //
+//y, err := //
+z, err := //
+
+//Naming - camelCase
+
+// Constants - never change
+// const MaxSpeed = 30
+// const AppAuthor = "Bon"
+
