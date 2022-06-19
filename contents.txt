@@ -220,3 +220,18 @@ case 'a', 'e', 'i', 'o', 'u':
 case 'A', 'E', 'I', 'O', 'U'
 printf("")
 }
+
+24  - Looping - only one loop in go lang - go
+// Basic Looping
+for i := 0; i < 10; i++ {   //... }
+
+// While Looping
+for i < 10 { /... i++}
+
+// Break
+for {  if { break } }
+
+// Continue - Skip the current loop - iteration
+for i :=0 ; i < 10; i++ {
+    if i % 2 === 0 { continue }
+}
