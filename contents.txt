@@ -235,3 +235,12 @@ for {  if { break } }
 for i :=0 ; i < 10; i++ {
     if i % 2 === 0 { continue }
 }
+
+// 27
+// Standard Library Packages
+// Generating Random numbers
+// Control Flow
+// Looping
+//Retrieving System Time
+
+//https://pkg.go.dev/std
