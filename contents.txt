@@ -292,3 +292,24 @@ sample := struct {
     "hello",
     1, 2,
 }
+
+// 32 -  Same kind of data stored consecutively - generally fixed size
+
+// creation of an array
+var myArray [3]int
+
+myArray := [3]int{7,8,9}
+
+myArray := [...]int{7,8,9} - ... -> takes size from elements
+
+myArray := [4]int{7,8,9} -> 4 == 0 // default
+
+// Accessing the array
+myArray[0] = 7
+
+// iteration over
+myArray := [...]int{7,8, 9}
+for i := 0; i < len(myArray); i++ {
+    item := myArray[i]
+    fmt.println(item)
+}
