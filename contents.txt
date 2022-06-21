@@ -244,3 +244,51 @@ for i :=0 ; i < 10; i++ {
 //Retrieving System Time
 
 //https://pkg.go.dev/std
+
+/*********************************************************************************************************************************/
+    Go Programming: Types
+
+/*********************************************************************************************************************************/
+// 29 Structures
+// allow data to be stored in groups -  class in other pgm languages
+// inside is called field
+// type Sample struct {
+    field string
+    a, b int
+ }
+ data := Sample{"word", 1, 2}
+
+ data := Sample {
+    field: "word",
+    a: 1,
+    b: 2
+ }
+
+default values
+data := Sample {} // field = "" a,b = 0
+data := Sample{ a: 5 }
+
+// Accessing Fields
+word := data.field
+a, b := data.a, data.b
+
+data.field = "hello"
+data.a = 10
+data.b = 20
+
+// Anonymous structures
+var sample struct {
+    field string
+    a, b int
+}
+sample.field = "hello"
+sample.a = 10
+
+// Short hand - must have all fields defined
+sample := struct {
+    field string
+    a, b int
+} {
+    "hello",
+    1, 2,
+}
