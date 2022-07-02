@@ -377,3 +377,34 @@ slice[a:b] // => a = start index (inclusive) / b = end index(exclusive)
 
  board[0][0] = "X"
  board[0][1] = "0"
+
+ //39 - Maps - key-value pairs
+ // stored in random order
+ // fast when we know the key
+ // no need to specify the size
+
+ // myMap := make(map[string]int)
+
+  myMap := map[string]int {
+    "item 1" : 1,
+    "item 2" : 2,
+    "item 3" : 3,
+  }
+
+  // Map operations
+  insert : myMap["fav number"] = 5
+  Read :  fav := myMap["fav number"]
+          missing := myMap["age"] // default value = default value type of map type (int  = 0)
+  Delete :  delete(myMap, "fav number")
+  check Existence : price, found := myMap["price"]
+                     if !found {
+                       fmt.println("Price not found")
+                       return
+                     }
+
+ // map iteration
+
+ myMap := make(map[string]int)
+ for key, value := range myMap {
+    ...
+ }
