@@ -293,7 +293,7 @@ sample := struct {
     1, 2,
 }
 
-// 32 -  Same kind of data stored consecutively - generally fixed size
+// 32 - Array  Same kind of data stored consecutively - generally fixed size
 
 // creation of an array
 var myArray [3]int
@@ -313,3 +313,67 @@ for i := 0; i < len(myArray); i++ {
     item := myArray[i]
     fmt.println(item)
 }
+
+// 35 - slices - Companion types that work with arrays
+// Enable "view" into an array
+// create and destroy the slices
+// min memory - not copy just - memory address point to original array
+
+// creating a slice
+
+mySlice := []int{1,2,3} // [] => no need to specify size
+
+// accessing
+item1 := mySlice[0]
+
+// slice Syntax
+slice[a:b] // => a = start index (inclusive) / b = end index(exclusive)
+
+ numbers := [...]int{1, 2, 3, 4}
+
+ slice1 := numbers[:] // [1, 2, 3, 4]
+
+ slice2 := numbers[1:] // [2, 3, 4]
+ slice3 := slice2[:1] // [2]
+
+ slice4 := numbers[:2] // [1, 2]
+ slice5 := numbers[1:3] // [2, 3]
+
+
+ // Dynamic Arrays - using append()
+ numbers := []int{1, 2, 3}
+ numbers = append(numbers, 4,5,6)
+
+ 3 dots = extend with another slice
+ part1 := []int{1, 2, 3}
+ part2 := []int{4,5,6}
+
+ combined := append(part1, part2...)
+
+ // Preallocation - make()
+ // useful when number of elements is known, but their values are still unknown
+
+ // slice := make([]int, 10)
+
+ // Slices to Functions - work with slices of any size
+
+ func iterate(slice []int) {
+    for i := 0; i < len(slice); i++ {
+        // ...
+    }
+ }
+ small := []int{1}
+ big := []int{1, 2, 3, 4, 5 ,6,7}
+ iterate(small)
+ iterate(big)
+
+ // Multi dimensional Slices
+ board := [][]string{
+    // type declaration is optional
+    []string{"_","_","_"},
+    {"_","_","_"},
+    {"_","_","_"}
+ }
+
+ board[0][0] = "X"
+ board[0][1] = "0"
